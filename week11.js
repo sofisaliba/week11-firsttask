@@ -1,11 +1,11 @@
 //Пример
 //Используйте метод querySelector, чтобы найти элемент <p>. При нажатии на кнопку измените его текст на "Ты нашёл элемент и изменил его текст!"
 //Подсказка: Используйте метод для изменения текстового содержимого элемента (innerHTML/innerText/textContent)
-
-const paragraph = document.getElementById('practicum0');
+const element = document.querySelector('#practicum0');
+//const paragraph = document.getElementById('practicum0');
 
 function makeZero() {
-	paragraph.innerText = 'Ты нашёл элемент и изменил его текст!';
+	element.innerText = 'Ты нашёл элемент и изменил его текст!';
 }
 
 document.querySelector('.b-0').onclick = makeZero;
@@ -13,9 +13,10 @@ document.querySelector('.b-0').onclick = makeZero;
 //Задание 1
 //Используйте метод getElementById, чтобы найти элемент <p>. При нажатии на кнопку измените его текст на "Привет!"
 //Подсказка: Используйте метод для изменения текстового содержимого элемента (innerHTML/innerText/textContent)
-
+let element2 = document.querySelector('#practicum');
 function makeOne() {
 	//Ваш код
+	element2.innerText = 'Привет!';
 }
 
 document.querySelector('.b-1').onclick = makeOne;
@@ -23,9 +24,11 @@ document.querySelector('.b-1').onclick = makeOne;
 //Задание 2
 //Используйте метод getElementById, чтобы найти элемент <span>. При нажатии на кнопку измените его текст на "Привет, Мир!"
 //Подсказка: Используйте метод для изменения текстового содержимого элемента (innerHTML/innerText/textContent)
-
+//const part = querySelector('span');
+const text = document.getElementById('practicum2');
 function makeTwo() {
 	//Ваш код
+	text.textContent = "Привет, Мир!";
 }
 
 document.querySelector('.b-2').onclick = makeTwo;
@@ -33,9 +36,11 @@ document.querySelector('.b-2').onclick = makeTwo;
 //Задание 3
 //Используйте метод querySelector, чтобы найти элемент <h1>. При нажатии на кнопку измените его текст на "Заголовок изменен!"
 //Подсказка: Используйте метод для изменения текстового содержимого элемента (innerHTML/innerText/textContent)
-
+let topic = document.querySelector('#practicum3');
+//const newtopic = document.getElementById('pacticum3');
 function makeThree() {
 	//Ваш код
+	topic.innerText = "Заголовок изменен";
 }
 
 document.querySelector('.b-3').onclick = makeThree;
