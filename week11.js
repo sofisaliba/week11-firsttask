@@ -48,9 +48,10 @@ document.querySelector('.b-3').onclick = makeThree;
 //Задание 4
 //Используйте метод querySelector, чтобы найти элемент <div>. При нажатии на кнопку измените его фоновый цвет на красный.
 //Подсказка: Используйте свойство style для изменения стилей элемента
-
+let backgroundColor = document.querySelector('#practicum4');
 function makeFour() {
 	//Ваш код
+	backgroundColor.style.backgroundColor = 'red';
 }
 
 document.querySelector('.b-4').onclick = makeFour;
@@ -58,9 +59,11 @@ document.querySelector('.b-4').onclick = makeFour;
 //Задание 5
 //Используйте метод getElementById, чтобы найти элемент <input>. При нажатии на кнопку измените его значение на "Новое значение".
 //Подсказка: Используйте свойство value для изменения значения элемента формы
-
+const input = document.getElementById('practicum5');
 function makeFive() {
 	//Ваш код
+	input.value = 'Новое значение';
+	
 }
 
 document.querySelector('.b-5').onclick = makeFive;
@@ -71,8 +74,11 @@ document.querySelector('.b-5').onclick = makeFive;
 
 function makeSix() {
 	var img = document.getElementById('practicum6');
-	img.src = 'newimage.jpg';
-	img.alt = 'Новое изображение';
+	//img.src = 'newimage.jpg';
+	//img.alt = 'Новое изображение';
+	img.setAttribute('src', 'newimage.jpg');
+	img.setAttribute('alt', 'Новое изображение');
+	
 }
 
 document.querySelector('.b-6').onclick = makeSix;
@@ -80,8 +86,10 @@ document.querySelector('.b-6').onclick = makeSix;
 //Задание 7
 //Используйте метод querySelector, чтобы найти элемент <a>. При нажатии на кнопку измените его href на "https://www.google.com", а название ссылки на "Ссылка на Google".
 //Подсказка: Используйте знак равенства для изменения атрибутов элемента и метод для изменения текстового содержимого элемента
-
+let link = document.querySelector('#practicum7');
 function makeSeven() {
+	link.setAttribute('href', 'https://www.google.com');
+	link.innerText = 'Ссылка на Google';
 	//Ваш код
 }
 
@@ -93,9 +101,16 @@ document.querySelector('.b-7').onclick = makeSeven;
 
 function makeEight() {
 	//Найдите элемент x
+	const list = document.getElementById('practicum8');
 	//Создайте новый пункт списка y
+	let newElement = document.createElement('li');
 	//Добавьте значение в созданный пункт списка y
+	//let item = 'Новый элемент';
+	const text = document.createTextNode('Новый элемент');
 	//Добавьте в список х новый элемент y
+	newElement.append(text);
+	list.append( newElement );
+
 }
 
 document.querySelector('.b-8').onclick = makeEight;
@@ -106,9 +121,14 @@ document.querySelector('.b-8').onclick = makeEight;
 
 function makeNine() {
 	//Найдите элемент
+	let selects = document.getElementById('practicum9');
 	//Создайте новый элемент
+	let newElement = document.createElement('option');
 	//Добавьте текст в созданный эелемент
+	const text = document.createTextNode('Новый вариант');
 	//Добавьте новый элемент в выпадающий список
+	newElement.append(text);
+	selects.append(newElement);
 }
 
 document.querySelector('.b-9').onclick = makeNine;
@@ -118,6 +138,8 @@ document.querySelector('.b-9').onclick = makeNine;
 //Подсказка: Используйте свойство display для изменения стилей элемента
 
 function makeTen() {
+	let block = document.getElementById('practicum10');
+	block.style.display = 'none';
 	//Ваш код
 }
 
@@ -128,6 +150,9 @@ document.querySelector('.b-10').onclick = makeTen;
 //Подсказка: Используйте свойство style для изменения стилей элемента
 
 function makeEleven() {
+	let block = document.getElementById('practicum11');
+	block.style.height = '200px';
+	block.style.width = '400px';
 	//Ваш код
 }
 
