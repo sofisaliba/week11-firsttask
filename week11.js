@@ -362,13 +362,14 @@ function makeTwentyFive() {
 	//1 шаг: Найдите элемент
 	let div = document.getElementById('practicum25');
 	//2 шаг: Добавьте элементу, найденному в первом шаге, атрибут: ('data-info', 'Дополнительная информация');
-	let data = div.setAttribute('data-info', 'Дополнительная информация');
+	div.setAttribute('data-info', 'Дополнительная информация');
 	//3 шаг: Запишите значение атрибута в переменную
-	//div.getAttribute('data-info');
+	let data = div.getAttribute('data-info');
 	//4 шаг: Найдите элемент, в который нужно вставить значение из 3 шага
-	let info = document.getElementById(infoOutput);
+	let info = document.getElementById('infoOutput');
 	//5 шаг: Добавьте в элемент 4 шага текстовое значение 3 шага. Например: переменная = 'Добавленный атрибут: ' + название переменной из 3 шага;
-	info.textContent = 'Добавленный атрибут: ' + data;
+	info = 'Добавленный атрибут: ' + data;
+	console.log(info);
 }
 
 document.querySelector('.b-25').onclick = makeTwentyFive;
